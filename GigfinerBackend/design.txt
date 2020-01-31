@@ -1,0 +1,21 @@
+Gigfiner api/
+
+REST API
+URIS
+/musicians => list of musicians
+/musicians/id => info about the musician
+/events => list of events
+/events/id => info about the event
+
+REST API:
+
+GET /musicians => returns JSON list of all musicians.
+GET /musicians?genre=<genre> => returns JSON list of musicians which the given genre
+GET /musicians/id => returns properties of the musician in JSON
+GET /events => returns JSON list of all events
+GET /events?location=<location> => returns JSON list of event that is in specified location
+GET /events/id
+
+POST /musicians/id/ => Update user info. 
+POST /events/id => Update event info. 
+ 
