@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import NavigationBar from 'react-native-navbar';
 
-class SignupScreen extends Component
+class LoginScreen extends Component
 {
     constructor(props)
     {
@@ -11,38 +11,30 @@ class SignupScreen extends Component
         //Opening a navigation object for being able to navigate to different pages.
         this.navigate = this.props.navigation.navigate;
 
-        /**
-        * TODO: Go to login page.
-        * When button clicked, we have to route to /login (which has signup inside)
-        */
-        this.rightButtonConfig = {
-          title: 'Login',
-          handler: () => this.navigate('Signup'),
-          };
-  
+        this.onSignupPressed = this.onSignupPressed.bind(this);
+    }
+
+    onSignupPressed()
+    {
+      return this.navigate('Signup');
     }
 
     render()
     {
         return (
-            //The empty view should be the dynamic part. 
+            //TODO: Update here with the proper login form.
             <View style={styles.container}>
                 <View style={styles.navbar}>
                   <NavigationBar
                     title={titleConfig}
-                    rightButton={this.rightButtonConfig}
                   />
                 </View>
                 <View style={styles.content}>
-                    <Text>Welcome to the signup page.</Text>
+                    <Text>Welcome to the login page.</Text>
+                    <Button title="Sign up!" onPress={this.onSignupPressed}>Signup</Button>
                 </View>
             </View>
           );
-    }
-
-    onSignupClicked()
-    {
-        return this.navigate('Home');
     }
 }
 
@@ -60,9 +52,9 @@ const styles = StyleSheet.create({
       textAlign: 'center'
     }
   });
-
+  
 const titleConfig = {
 title: 'Gigfiner',
 };
 
-export default SignupScreen;
+export default LoginScreen;

@@ -18,7 +18,7 @@ class HomeScreen extends Component
        */
       this.rightButtonConfig = {
       title: 'Login',
-      handler: () => this.navigate('Signup'),
+      handler: () => this.navigate('Login'),
       };
 
     }
@@ -40,13 +40,6 @@ class HomeScreen extends Component
             </View>
           );
     }
-
-    onSignupClicked()
-    {
-        return this.navigate('Signup');
-    }
-
-    
 }
 
 const styles = StyleSheet.create({

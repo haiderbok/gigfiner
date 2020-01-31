@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import Event from '../components/Event'
 
-export default class MusicianFeed extends Component 
+export default class MusicianFeedScreen extends Component 
 {
     constructor(props)
     {
